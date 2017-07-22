@@ -32,8 +32,6 @@ public class Register extends AppCompatActivity {
         BackgroundTask backgroundTask = new BackgroundTask(this);
         backgroundTask.execute(registerBackgroundTask, name, password, contact, country);
         finish();
-
-
     }
 
 }
