@@ -35,7 +35,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
 
         //stores path of db php registration script on host
         //server_IPv4/db_folder/file
-        String reg_url = "http://10.0.0.13/project/register.php";
+        String reg_url = "http://brightlightproductions.online/add.php";
 
         //assures register button sent this background call
         String registerBkgdTaskCheck = params[0];

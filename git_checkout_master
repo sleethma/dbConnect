@@ -1,0 +1,19 @@
+[33mcommit 537f79349b29e744e2beda6a1161c77859fb8c44[m[33m ([m[1;36mHEAD -> [m[1;32monline-db[m[33m)[m
+Author: Michael Sleeth <sleeth.ma@gmail.com>
+Date:   Sat Jul 22 10:44:12 2017 -0500
+
+    Add index.html init.php and add.php files
+    
+    This allows the web form to access write capabilities to db
+
+[33mcommit 36e558a31bcc4caf41baab9e9ed6d6b9671ea8cb[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Michael Sleeth <sleeth.ma@gmail.com>
+Date:   Sat Jul 22 00:55:53 2017 -0500
+
+    Adds .idea/vcs.xml file
+
+[33mcommit 06c1aef567d3ab44b47b669f4f021692bfc73e6f[m
+Author: Michael Sleeth <sleeth.ma@gmail.com>
+Date:   Sat Jul 22 00:22:15 2017 -0500
+
+    Initial Commit
