@@ -153,7 +153,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
                     break;
                 }
             case 3:
-                Intent intent = new Intent(this.mContextRegister, ParsedJavaView.class);
+                Intent intent = new Intent(this.mContextRegister, ParsedJsonListView.class);
                 intent.putExtra("parseJSONKey",jsonString);
                 mContextRegister.startActivity(intent);
                 break;

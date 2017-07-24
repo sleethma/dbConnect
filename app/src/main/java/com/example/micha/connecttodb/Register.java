@@ -47,8 +47,11 @@ public class Register extends AppCompatActivity {
 
     //parses JSON received from last server PHP call
     public void parseJSON(View view) {
-        String jsonString = BackgroundTask.getJsonString();
-        Intent intent = new Intent(this, ParsedJavaView.class);
+        // could not get from instance of class made in @method:getJSON.
+        // Tried-->String jsonString = BackgroundTask.getJsonString(); Temp solution directly below
+        String jsonString = jsonTextView.getText().toString().trim();
+
+        Intent intent = new Intent(this, ParsedJsonListView.class);
         intent.putExtra("jsonToParseKey",jsonString);
         startActivity(intent);
 //        String parseJsonBackgroundTask = "parseJSON";
