@@ -1,5 +1,6 @@
 package com.example.micha.connecttodb;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -46,8 +47,12 @@ public class Register extends AppCompatActivity {
 
     //parses JSON received from last server PHP call
     public void parseJSON(View view) {
-        String parseJsonBackgroundTask = "parseJSON";
-        BackgroundTask backgroundTask = new BackgroundTask(this, jsonTextView);
-        backgroundTask.execute(parseJsonBackgroundTask);
+        String jsonString = BackgroundTask.getJsonString();
+        Intent intent = new Intent(this, ParsedJavaView.class);
+        intent.putExtra("jsonToParseKey",jsonString);
+        startActivity(intent);
+//        String parseJsonBackgroundTask = "parseJSON";
+//        BackgroundTask backgroundTask = new BackgroundTask(this, jsonTextView);
+//        backgroundTask.execute(parseJsonBackgroundTask);
     }
 }

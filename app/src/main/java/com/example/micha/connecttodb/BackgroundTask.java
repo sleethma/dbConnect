@@ -21,6 +21,8 @@ import java.net.URL;
 import java.net.URLEncoder;
 import android.widget.TextView;
 
+import static java.security.AccessController.getContext;
+
 
 /**
  * Created by micha on 7/21/2017.
@@ -29,6 +31,8 @@ import android.widget.TextView;
 public class BackgroundTask extends AsyncTask<String, Void, String> {
 
     Context mContextRegister;
+
+    private static String jsonString;
 
     //creates textview constructor for thread access
     TextView jsonTextView = null;
@@ -60,7 +64,7 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         //server_IPv4/db_folder/file
         String reg_url = "http://brightlightproductions.online/add.php";
         String json_url = "http://brightlightproductions.online/getJSON.php";
-        String jsonString;
+
 
 
         //checks which button was clicked
@@ -147,11 +151,18 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             case 2:
                 if(jsonTextView != null){
                     jsonTextView.setText(result);
+                    break;
                 }
-
+            case 3:
+                Intent intent = new Intent(this.mContextRegister, ParsedJavaView.class);
+                intent.putExtra("parseJSONKey",jsonString);
+                mContextRegister.startActivity(intent);
+                break;
         }
         postExecuteResponse = 0;
     }
-
-
+    //getter for jsonSting
+    public static String getJsonString() {
+        return jsonString;
+    }
 }
