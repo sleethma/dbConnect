@@ -22,7 +22,7 @@ public class Register extends AppCompatActivity {
         passwordEntry = (EditText) findViewById(R.id.et_password);
         contactEntry = (EditText) findViewById(R.id.et_contact);
     }
-
+    //adds user info into db through bkgd task
     public void registerUser(View view){
         name = nameEntry.getText().toString();
         password = passwordEntry.getText().toString();
@@ -32,6 +32,12 @@ public class Register extends AppCompatActivity {
         BackgroundTask backgroundTask = new BackgroundTask(this);
         backgroundTask.execute(registerBackgroundTask, name, password, contact, country);
         finish();
+    }
+    //gets JSON from server PHP call
+    public void getJSON(View view){
+        String getJsonBackgroundTask = "getJSON";
+        BackgroundTask backgroundTask = new BackgroundTask(this);
+        backgroundTask.execute(getJsonBackgroundTask);
     }
 
 }
