@@ -133,7 +133,6 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             }
         }
         if (chosenBkgdTaskCheck.equals("parseJSON")){
-
         }
         return null;
     }

@@ -5,9 +5,11 @@ import android.os.Bundle;
 
 public class ParsedJavaView extends AppCompatActivity {
 
+    String jsonString;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.parsed_java_view);
+        setContentView(R.layout.parsed_json_view);
+        jsonString = getIntent().getExtras().getString("jsonToParseKey");
     }
 }
