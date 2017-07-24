@@ -33,10 +33,10 @@ public class Register extends AppCompatActivity {
         contact = contactEntry.getText().toString();
         country = countryEntry.getText().toString();
         String registerBackgroundTask = "register";
-        BackgroundTask backgroundTask = new BackgroundTask(this, null);
+        BackgroundTask backgroundTask = new BackgroundTask(this);
         backgroundTask.execute(registerBackgroundTask, name, password, contact, country);
-        finish();
     }
+
     //gets JSON from server PHP call
     public void getJSON(View view){
         String getJsonBackgroundTask = "getJSON";

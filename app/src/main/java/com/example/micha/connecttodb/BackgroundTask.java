@@ -44,6 +44,10 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         }
     }
 
+    BackgroundTask(Context context) {
+        this.mContextRegister = context;
+    }
+
     @Override
     protected void onPreExecute() {
         super.onPreExecute();

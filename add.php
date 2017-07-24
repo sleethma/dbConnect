@@ -5,7 +5,7 @@ $password=$_POST["password"];
 $contact=$_POST["contact"];
 $country=$_POST["country"];
 
- $sql= "insert into users values('$name','$password','$contact','country');";
+ $sql= "insert into users values('$name','$password','$contact','$country');";
 
   if(mysqli_query($connection, $sql))
   {
