@@ -60,9 +60,12 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
         //server_IPv4/db_folder/file
         String reg_url = "http://brightlightproductions.online/add.php";
         String json_url = "http://brightlightproductions.online/getJSON.php";
+        String jsonString;
 
-        //assures register button sent this background call
+
+        //checks which button was clicked
         String chosenBkgdTaskCheck = params[0];
+        //assures register button sent this background call
         if (chosenBkgdTaskCheck.equals("register")) {
             //get params
             String name = params[1];
@@ -101,7 +104,6 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             }
         }
         if (chosenBkgdTaskCheck.equals("getJSON")) {
-            String jsonString;
             try {
                 URL jsonURL = new URL(json_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) jsonURL.openConnection();
@@ -125,6 +127,9 @@ public class BackgroundTask extends AsyncTask<String, Void, String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+        if (chosenBkgdTaskCheck.equals("parseJSON")){
+
         }
         return null;
     }

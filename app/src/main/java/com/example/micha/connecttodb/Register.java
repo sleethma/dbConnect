@@ -44,4 +44,10 @@ public class Register extends AppCompatActivity {
         backgroundTask.execute(getJsonBackgroundTask);
     }
 
+    //gets JSON from server PHP call
+    public void parseJSON(View view) {
+        String parseJsonBackgroundTask = "parseJSON";
+        BackgroundTask backgroundTask = new BackgroundTask(this, jsonTextView);
+        backgroundTask.execute(parseJsonBackgroundTask);
+    }
 }
